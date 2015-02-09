@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-clean-css",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Minify CSS using clean-css",
   "keywords": [
     "jstransformer"
