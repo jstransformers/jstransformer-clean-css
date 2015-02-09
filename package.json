@@ -5,7 +5,9 @@
   "keywords": [
     "jstransformer"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "clean-css": "^3.0.10"
+  },
   "scripts": {
     "test": "node test"
   },
