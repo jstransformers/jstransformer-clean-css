@@ -3,10 +3,8 @@
 var Cleaner  = require('clean-css');
 var defaultCleaner = new Cleaner();
 
-var versions = {};
-
-exports.name = 'remarkable';
-exports.outputFormat = 'html';
+exports.name = 'clean-css';
+exports.outputFormat = 'css';
 exports.render = function (str, options) {
   var cleaner;
   if (!options ||
