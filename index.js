@@ -2,6 +2,7 @@
 
 var Cleaner  = require('clean-css');
 var defaultCleaner = new Cleaner();
+var Promise = require('promise');
 
 exports.name = 'clean-css';
 exports.outputFormat = 'css';
