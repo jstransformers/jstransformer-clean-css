@@ -5,13 +5,29 @@ var defaultCleaner = new Cleaner();
 
 exports.name = 'clean-css';
 exports.outputFormat = 'css';
-exports.render = function (str, options) {
-  var cleaner;
+
+function getCleaner (options) {
   if (!options ||
       (typeof options === 'object' && Object.keys(options).length === 0)) {
-    cleaner = defaultCleaner;
+    return defaultCleaner;
   } else {
-    cleaner = new Cleaner(options);
+    return new Cleaner(options);
   }
-  return cleaner.minify(str).styles;
+}
+
+exports.render = function (str, options) {
+  return getCleaner(options).minify(str).styles;
+};
+
+exports.renderAsync = function (str, options) {
+  return new Promise(function (fulfill, reject) {
+    getCleaner(options).minify(str, function (err, minified) {
+      if (err) {
+        reject(err);
+      }
+      else {
+        fulfill(minified.styles);
+      }
+    });
+  });
 };
