@@ -5,6 +5,7 @@ var defaultCleaner = new Cleaner();
 var Promise = require('promise');
 
 exports.name = 'clean-css';
+exports.inputFormats = ['clean-css', 'css', 'cssmin'];
 exports.outputFormat = 'css';
 
 function getCleaner (options) {
