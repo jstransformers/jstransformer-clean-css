@@ -14,9 +14,9 @@
 ## API
 
 ```js
-var foo = require('jstransformer')(require('jstransformer-foo'))
+var clean = require('jstransformer')(require('jstransformer-clean-css'))
 
-foo.render('a { font-weight: bold; }').body
+clean.render('a { font-weight: bold; }').body
 //=> 'a{font-weight:bold;}'
 ```
 
