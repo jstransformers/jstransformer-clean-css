@@ -1,35 +1,34 @@
-'use strict';
+'use strict'
 
-var Cleaner  = require('clean-css');
-var defaultCleaner = new Cleaner();
-var Promise = require('promise');
+var Cleaner = require('clean-css')
+var Promise = require('promise')
 
-exports.name = 'clean-css';
-exports.inputFormats = ['clean-css', 'cssmin'];
-exports.outputFormat = 'css';
+var defaultCleaner = new Cleaner()
 
-function getCleaner (options) {
+exports.name = 'clean-css'
+exports.inputFormats = ['clean-css', 'cssmin']
+exports.outputFormat = 'css'
+
+function getCleaner(options) {
   if (!options ||
       (typeof options === 'object' && Object.keys(options).length === 0)) {
-    return defaultCleaner;
-  } else {
-    return new Cleaner(options);
+    return defaultCleaner
   }
+  return new Cleaner(options)
 }
 
 exports.render = function (str, options) {
-  return getCleaner(options).minify(str).styles;
-};
+  return getCleaner(options).minify(str).styles
+}
 
 exports.renderAsync = function (str, options) {
-  return new Promise(function (fulfill, reject) {
+  return new Promise(function (resolve, reject) {
     getCleaner(options).minify(str, function (err, minified) {
       if (err) {
-        reject(err);
+        reject(err)
+      } else {
+        resolve(minified.styles)
       }
-      else {
-        fulfill(minified.styles);
-      }
-    });
-  });
-};
+    })
+  })
+}
