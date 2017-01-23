@@ -9,7 +9,7 @@
     "index.js"
   ],
   "dependencies": {
-    "clean-css": "^3.0.10",
+    "clean-css": "^4.0.0",
     "promise": "^7.0.1"
   },
   "devDependencies": {
