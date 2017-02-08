@@ -1,7 +1,6 @@
 'use strict'
 
 var Cleaner = require('clean-css')
-var Promise = require('promise')
 
 var defaultCleaner = new Cleaner()
 

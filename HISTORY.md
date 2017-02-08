@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0: 2017-02-07
+
+- Update to `clean-css@^4.0.5`
+
 ## v1.1.1: 2016-06-16
 
 - Updated Boilerplate

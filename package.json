@@ -1,6 +1,9 @@
 {
+  "dependencies": {
+    "clean-css": "^4.0.5"
+  },
   "name": "jstransformer-clean-css",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Minify CSS using clean-css",
   "keywords": [
     "jstransformer"
@@ -8,10 +11,6 @@
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "clean-css": "^3.0.10",
-    "promise": "^7.0.1"
-  },
   "devDependencies": {
     "test-jstransformer": "^1.0.0",
     "xo": "^0.17.1"
