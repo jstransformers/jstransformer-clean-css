@@ -1,5 +1,7 @@
 # jstransformer-clean-css
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-clean-css.svg)](https://greenkeeper.io/)
+
 [clean-css](https://github.com/jakubpawlowicz/clean-css) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-clean-css/master.svg)](https://travis-ci.org/jstransformers/jstransformer-clean-css)
