@@ -1,8 +1,8 @@
 'use strict'
 
-var Cleaner = require('clean-css')
+const Cleaner = require('clean-css')
 
-var defaultCleaner = new Cleaner()
+const defaultCleaner = new Cleaner()
 
 exports.name = 'clean-css'
 exports.inputFormats = ['clean-css', 'cssmin']
@@ -21,8 +21,8 @@ exports.render = function (str, options) {
 }
 
 exports.renderAsync = function (str, options) {
-  return new Promise(function (resolve, reject) {
-    getCleaner(options).minify(str, function (err, minified) {
+  return new Promise((resolve, reject) => {
+    getCleaner(options).minify(str, (err, minified) => {
       if (err) {
         reject(err)
       } else {

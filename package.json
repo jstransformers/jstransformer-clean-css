@@ -3,8 +3,8 @@
     "clean-css": "^4.0.5"
   },
   "name": "jstransformer-clean-css",
-  "version": "2.0.0",
-  "description": "Minify CSS using clean-css",
+  "version": "2.1.0",
+  "description": "clean-css support for JSTransformers",
   "keywords": [
     "jstransformer"
   ],
