@@ -13,6 +13,7 @@ function getCleaner(options) {
       (typeof options === 'object' && Object.keys(options).length === 0)) {
     return defaultCleaner
   }
+
   return new Cleaner(options)
 }
 
